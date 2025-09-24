@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -34,3 +35,41 @@ spec:
     - name: http
       port: 8001
       targetPort: 8001
+=======
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: ip-reputation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+        - name: auth-service
+          image: ntvs28/iprep-auth:1.0.0
+          ports:
+            - containerPort: 8001
+          env:
+            - name: MONGO_URI
+              value: mongodb://mongodb:27017/authdb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-service
+  namespace: ip-reputation
+spec:
+  selector:
+    app: auth-service
+  ports:
+    - name: http
+      port: 8001
+      targetPort: 8001
+>>>>>>> 4aac0aa (Initial commit: IP Reputation Checker microservices + Kubernetes manifests)

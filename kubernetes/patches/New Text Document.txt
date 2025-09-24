@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 spec:
   template:
     spec:
@@ -9,3 +10,16 @@ spec:
             secretKeyRef:
               name: mongo-uri
               key: MONGO_URI
+=======
+spec:
+  template:
+    spec:
+      containers:
+      - name: auth-service
+        env:
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: mongo-uri
+              key: MONGO_URI
+>>>>>>> 4aac0aa (Initial commit: IP Reputation Checker microservices + Kubernetes manifests)

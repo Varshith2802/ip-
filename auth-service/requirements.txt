@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fastapi
 uvicorn
 python-multipart
@@ -9,3 +10,16 @@ requests
 starlette
 bcrypt
 pymongo
+=======
+fastapi
+uvicorn
+python-multipart
+pydantic
+passlib[bcrypt]
+python-jose[cryptography]
+psycopg2-binary
+requests
+starlette
+bcrypt
+pymongo
+>>>>>>> 4aac0aa (Initial commit: IP Reputation Checker microservices + Kubernetes manifests)

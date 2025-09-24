@@ -9,4 +9,8 @@
           initialDelaySeconds: 8
           periodSeconds: 5
           timeoutSeconds: 2
+<<<<<<< HEAD
           failureThreshold: 3
+=======
+          failureThreshold: 3
+>>>>>>> 4aac0aa (Initial commit: IP Reputation Checker microservices + Kubernetes manifests)

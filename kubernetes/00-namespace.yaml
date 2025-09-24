@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Namespace
 metadata:
   name: ip-reputation
+=======
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ip-reputation
+>>>>>>> 4aac0aa (Initial commit: IP Reputation Checker microservices + Kubernetes manifests)

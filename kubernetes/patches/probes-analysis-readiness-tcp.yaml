@@ -1,0 +1,12 @@
+﻿spec:
+  template:
+    spec:
+      containers:
+      - name: analysis-service
+        readinessProbe:
+          tcpSocket:
+            port: 8002
+          initialDelaySeconds: 8
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3

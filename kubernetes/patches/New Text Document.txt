@@ -1,0 +1,11 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: auth-service
+        env:
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: mongo-uri
+              key: MONGO_URI
